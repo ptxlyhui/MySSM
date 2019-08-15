@@ -23,12 +23,14 @@
     </properties>
 
     <dependencies>
+        <!--测试依赖-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
         <!--spring依赖start=======-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -60,7 +62,6 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
@@ -76,7 +77,6 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
         <!--利用这个处理事务问题-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -85,6 +85,45 @@
         </dependency>
         <!--spring依赖======END======-->
 
+        <!-- SpringAOP需要的依赖 -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+        <!--====END====-->
+
+        <!--持久层依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.6</version>
+        </dependency>
+        <!--持久层依赖====END====-->
+
+        <!--mybatis与spring整合所需要的依赖-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <!--数据源的引入，池化技术。-->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.3</version>
+        </dependency>
 
         <!--引入Json依赖-->
         <dependency>
@@ -118,14 +157,12 @@
             <artifactId>jackson-core-asl</artifactId>
             <version>1.9.13</version>
         </dependency>
-
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
         </dependency>
         <!--添加处理json为javabean==end==-->
-
 
         <!--添加文件上传依赖-->
         <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
@@ -135,22 +172,6 @@
             <version>1.3.3</version>
         </dependency>
         <!--文件上传依赖=====END=======-->
-
-
-        <!--持久层依赖-->
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.38</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.6</version>
-        </dependency>
-        <!--持久层依赖====END====-->
 
         <!--日志依赖-->
         <dependency>
@@ -169,20 +190,6 @@
             <version>1.2.17</version>
         </dependency>
         <!--日志依赖引入====END====-->
-
-        <!--数据源的引入，池化技术。-->
-        <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.3</version>
-        </dependency>
-
-        <!--mybatis与spring整合所需要的依赖-->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>2.0.1</version>
-        </dependency>
 
         <!--servlet jsp jstL 等依赖========-->
         <dependency>
@@ -225,16 +232,11 @@
             <version>1.10</version>
         </dependency>
 
-        <!-- SpringAOP需要的依赖 -->
+        <!--自动生成数据库相关代码，用于mybatis逆向工程-->
         <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>1.9.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.2</version>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.3.5</version>
         </dependency>
     </dependencies>
 
